@@ -1,6 +1,6 @@
 {
   "name": "@benjilegnard/reveal.js-mermaid-plugin",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "reveal.js plugin rendering mermaid diagrams from code blocks as inline SVG",
   "keywords": [
     "diagram",
