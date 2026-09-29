@@ -36,7 +36,16 @@ const tokyoNight = {
 const t = tokyoNight;
 // same font as the reveal.js theme, mermaid needs a real font name to measure text
 const fontFamily = '"Source Sans Pro", Helvetica, sans-serif';
-const accents = [t.blue, t.magenta, t.green, t.orange, t.cyan, t.red, t.yellow, t.teal];
+const accents = [
+  t.blue,
+  t.magenta,
+  t.green,
+  t.orange,
+  t.cyan,
+  t.red,
+  t.yellow,
+  t.teal,
+];
 
 const deck = new Reveal({
   plugins: [Markdown, Mermaid, Highlight],
@@ -102,7 +111,9 @@ deck.initialize({
 
       // git graph
       ...Object.fromEntries(accents.map((color, i) => [`git${i}`, color])),
-      ...Object.fromEntries(accents.map((_, i) => [`gitBranchLabel${i}`, t.bg])),
+      ...Object.fromEntries(
+        accents.map((_, i) => [`gitBranchLabel${i}`, t.bg]),
+      ),
       commitLabelColor: t.fg,
       commitLabelBackground: t.surface,
 

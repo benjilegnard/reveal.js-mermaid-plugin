@@ -85,4 +85,5 @@ There are alternatives I wasn't satisfied with, but thanks to them for the inspi
 ## Roadmap / Enhancements
 
 - no live-reload yet, the mermaid conversion is only done once.
-- better tree-shaking according to used
+- 
+- better tree-shaking according to used schemas ?
