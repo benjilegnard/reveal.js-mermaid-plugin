@@ -1,0 +1,22 @@
+name: Publish Package
+on:
+  release:
+    types: [created]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup pnpm and Node.js
+        uses: pnpm/setup@v3
+        with:
+          runtime: node@26
+          cache: true
+          require-lockfile: true
+        env:
+          pnpm_config__auth: |
+            { "https://registry.npmjs.org": { "@": { "authToken": ${{ toJSON(secrets.NPM_TOKEN) }} } } }
+      - run: pnpm publish --no-git-checks

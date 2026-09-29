@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>reveal.js mermaid plugin</title>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <textarea data-template>
+            # reveal.js mermaid plugin
+
+            Test deck for `@benjilegnard/reveal.js-mermaid-plugin`
+
+            ---
+
+            ## Flowchart
+
+            ```mermaid
+            flowchart LR
+              A[Markdown] --> B[Mermaid]
+              B --> C[Highlight]
+              C --> D((Slides))
+            ```
+
+            ---
+
+            ## Sequence diagram
+
+            ```mermaid
+            sequenceDiagram
+              participant R as Reveal
+              participant P as Plugin
+              participant M as mermaid
+              R->>P: init(deck)
+              P->>M: render(id, source)
+              M-->>P: svg
+              P-->>R: done
+            ```
+
+            ---
+
+            ## Class diagram
+
+            ```mermaid
+            classDiagram
+              class RevealPlugin {
+                +id: string
+                +init(deck)
+              }
+              class MermaidPlugin {
+                +id: "mermaid"
+              }
+              RevealPlugin <|-- MermaidPlugin
+            ```
+
+            ---
+
+            ## Highlight still works
+
+            ```ts
+            const deck = new Reveal({
+              plugins: [Markdown, Mermaid, Highlight],
+            });
+            ```
+
+            ---
+
+            ## Invalid diagram
+
+            The source stays visible, with a `mermaid-error` class:
+
+            ```mermaid
+            flowchart LR
+              A -->
+            ```
+          </textarea>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
