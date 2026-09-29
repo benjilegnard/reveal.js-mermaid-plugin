@@ -77,5 +77,12 @@ with `"moduleResolution": "bundler"` (the Vite default). With `node16`/`nodenext
 
 ## Alternatives
 
-- <https://github.com/zjffun/reveal.js-mermaid-plugin> : (embeds an hard-coded old version of mermaidjs)
-- <https://github.com/ludwick/reveal.js-mermaid-plugin> : (retired)
+There are alternatives I wasn't satisfied with, but thanks to them for the inspiration:
+
+- <https://github.com/zjffun/reveal.js-mermaid-plugin> : (customizable, but embeds an hard-coded old version of mermaid)
+- <https://github.com/ludwick/reveal.js-mermaid-plugin> : (retired, forces you to use specific syntax instead of code blocks, no customization )
+
+## Roadmap / Enhancements
+
+- no live-reload yet, the mermaid conversion is only done once.
+- better tree-shaking according to used
