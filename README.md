@@ -4,6 +4,9 @@ This is a [reveal.js](https://revealjs.com/) plugin to render [mermaid](http://m
 
 Its main goal is to have modern ESM support for mermaid, allow you to embed any mermaid version (>=10), and use internal reveal.js types for typed configuration.
 
+## Demo
+
+Visible on <https://benjilegnard.github.io/reveal.js-mermaid-plugin/>
 
 ## Installation
 
@@ -50,6 +53,17 @@ flowchart LR
 Each block is replaced by a `<div class="mermaid">` containing the inline SVG.
 If a diagram fails to render, the error is logged in the console, the source
 stays visible and its `<pre>` gets a `mermaid-error` class.
+
+Without the Markdown plugin, you just need to have html `<pre>`+`<code>` blocks:
+
+```html
+<pre>
+  <code class="mermaid">
+    flowchart LR
+      A --> B
+  </code>
+</pre>
+```
 
 ## TypeScript
 

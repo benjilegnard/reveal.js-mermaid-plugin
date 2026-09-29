@@ -18,6 +18,9 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2
     devDependencies:
+      highlight.js:
+        specifier: ^11.12.0
+        version: 11.12.0
       typescript:
         specifier: ^7.0.2
         version: 7.0.2
@@ -590,6 +593,10 @@ packages:
 
   hachure-fill@0.5.2:
     resolution: {integrity: sha512-3GKBOn+m2LX9iq+JC1064cSFprJY4jL1jCXTcpnfER5HYE2l/4EfWSGzkPa/ZDBmYI0ZOEj5VHV/eKnPGkHuOg==}
+
+  highlight.js@11.12.0:
+    resolution: {integrity: sha512-nbfWpyRMcMrPMmDwJB+dhX/eiaPKtc2RB+0QZskqJ3WjRA/FDS0e9hZrx8EC/lbEv8gXy98FcDbNa/dspAaJMg==}
+    engines: {node: '>=12.0.0'}
 
   iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
@@ -1329,6 +1336,8 @@ snapshots:
     optional: true
 
   hachure-fill@0.5.2: {}
+
+  highlight.js@11.12.0: {}
 
   iconv-lite@0.6.3:
     dependencies:
