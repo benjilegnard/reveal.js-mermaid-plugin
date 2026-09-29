@@ -16,7 +16,8 @@ jobs:
           runtime: node@26
           cache: true
           require-lockfile: true
+      # step env only: the auth config must be set on the step that publishes
+      - run: pnpm publish --no-git-checks
         env:
           pnpm_config__auth: |
             { "https://registry.npmjs.org": { "@": { "authToken": ${{ toJSON(secrets.NPM_TOKEN) }} } } }
-      - run: pnpm publish --no-git-checks
