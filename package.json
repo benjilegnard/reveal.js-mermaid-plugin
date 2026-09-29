@@ -10,8 +10,11 @@
     "reveal.js-plugin",
     "slides"
   ],
+  "homepage": "https://benjilegnard.github.io/reveal.js-mermaid-plugin/",
+  "bugs": "https://github.com/benjilegnard/reveal.js-mermaid-plugin/issues",
   "license": "MIT",
   "author": "Benjamin Legrand",
+  "repository": "github:benjilegnard/reveal.js-mermaid-plugin",
   "files": [
     "dist",
     "src"
